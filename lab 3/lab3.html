@@ -1,0 +1,103 @@
+<head>
+    <title>Username Save</title>
+</head>
+<body>
+
+    <form id="user1" onsubmit="addUser(event)">
+        <input type="text" id="username" placeholder="Write username" required>
+
+        <select id="username_type" name="username_type" required>
+            <option value="">Select type</option>
+            <option value="text">text</option>
+            <option value="number+text">number+text</option>
+            <option value="numbers">numbers</option>
+        </select>
+
+        <button type="submit">Add</button>
+    </form>
+
+    <h3>Added Users:</h3>
+    <div id="outputArea" style="margin-top:10px;"></div>
+
+    <button onclick="saveAll()" style="margin-top:20px;">Save All</button>
+
+    <h3>Saved Users:</h3>
+    <div id="savedArea" style="margin-top:10px;"></div>
+
+    <script>
+        let userList = [];
+
+        function addUser(event) {
+            event.preventDefault();
+
+            let user = document.getElementById("username").value.trim();
+            let type = document.getElementById("username_type").value;
+
+            if(user === "") {
+                alert("Username cannot be empty");
+                return;
+            }
+            if(type === "") {
+                alert("Please select a username type");
+                return;
+            }
+
+
+            userList.push({username: user, type: type});
+
+            let row = document.createElement("div");
+            row.style.display = "flex";
+            row.style.gap = "20px";
+            row.style.marginBottom = "5px";
+
+            let userBox = document.createElement("div");
+            userBox.style.border = "1px solid black";
+            userBox.style.padding = "10px";
+            userBox.style.width = "200px";
+            userBox.innerText = "Username: " + user;
+
+            let typeBox = document.createElement("div");
+            typeBox.style.border = "1px solid black";
+            typeBox.style.padding = "10px";
+            typeBox.style.width = "200px";
+            typeBox.innerText = "Type: " + type;
+
+            row.appendChild(userBox);
+            row.appendChild(typeBox);
+
+            document.getElementById("outputArea").appendChild(row);
+            document.getElementById("user1").reset();
+        }
+
+        function saveAll() {
+            let savedArea = document.getElementById("savedArea");
+            savedArea.innerHTML = "";
+
+            userList.forEach(item => {
+                let row = document.createElement("div");
+                row.style.display = "flex";
+                row.style.gap = "20px";
+                row.style.marginBottom = "5px";
+
+                let userBox = document.createElement("div");
+                userBox.style.border = "1px solid green";
+                userBox.style.padding = "10px";
+                userBox.style.width = "200px";
+                userBox.innerText = "Username: " + item.username;
+
+                let typeBox = document.createElement("div");
+                typeBox.style.border = "1px solid green";
+                typeBox.style.padding = "10px";
+                typeBox.style.width = "200px";
+                typeBox.innerText = "Type: " + item.type;
+
+                row.appendChild(userBox);
+                row.appendChild(typeBox);
+
+                savedArea.appendChild(row);
+            });
+        }
+    </script>
+
+</body>
+</html>
