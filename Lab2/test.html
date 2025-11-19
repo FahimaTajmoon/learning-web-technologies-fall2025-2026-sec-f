@@ -1,0 +1,80 @@
+<html >
+<head>
+    <title>JS Example</title>
+</head>
+<body>
+        <h1 id="head">JS Example</h1>
+        <input type="text" id="username" name="username" value="" >
+        <p id="uError"></p>
+        <input type="password" id="password" name="password" value="" >
+        <p id="pError"></p>
+        <input type="button" name="" value="Submit" onclick="test()">
+        
+        <script>
+            // name = "alamin";
+            // var name = "alamin";
+            // let name = "alamin";
+            // const name = "alamin"; 
+            // let std = [1, 'alamin', 2.5];
+            // std[0]
+            // let stds = [
+            //     [1, 'alamin', 2.5],
+            //     [2, 'alamin', 2.9],
+            //     [3, 'alamin', 3.5]
+            // ];
+            // std[2][2];
+
+            // if(1 === "1"){
+            //     true;
+            // }else{
+            //     false;
+            // }
+
+            // for(let a=0; a<10; a++){
+
+            // }
+
+            // function abc(xyz, b){
+            //     let c =xyz(10, b);
+            //     return c;
+            // }
+
+            // let xyz = function(a, b){
+            //     let c = a+b;
+            //     return c;
+            // }
+            // let d = abc(xyz, 20);
+
+            //console.log('testing from js script');  
+            //alert('test');
+            //document.write('testing from js');
+            function test(){
+                //let head = document.getElementsByTagName('h1')[0];
+                let username = document.getElementById('username').value;
+                let uError = document.getElementById('uError');
+
+                if(username == ""){
+                    uError.innerHTML = "please type username first!";
+                    uError.style.color = 'red';
+                }else{
+                    document.getElementById('head').innerHTML = username;
+                    uError.innerHTML = "";
+                }
+
+                 if(username == ""){
+                    uError.innerHTML = "please type your password first!";
+                    uError.style.color = 'red';
+                }else{
+                    document.getElementById('head').innerHTML = username;
+                    uError.innerHTML = "";
+                }
+
+
+                //let head = document.getElementById('head');
+                //head.innerHTML = username;
+
+                
+            }
+        </script>
+</body>
+</html>

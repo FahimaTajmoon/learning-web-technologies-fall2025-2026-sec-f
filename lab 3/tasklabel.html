@@ -1,0 +1,74 @@
+
+<html>
+<head>
+    <title>HTML</title>
+</head>
+<body>
+
+    <form action="" method="" enctype=""> 
+        
+        <table>
+            <tr>
+            
+                <td>username<br>
+                    <input type="text" name="" value=""/>
+                    
+                <select id="username_type" name="username_type">
+                    <option value="text">text</option>
+                    <option value="number+text">number+text</option>
+                    <option value="numbers">numbers</option>
+                    
+                
+    </select>
+                    <input type="submit" name="" value="ADD"/>
+                </td>
+
+                
+            </tr>
+            </table>
+        
+        </table>
+        
+    </form>
+
+
+</body>
+
+<script>
+    
+    document.getElementById("addBtn").addEventListener("click", function () {
+    
+    const username = document.getElementById("username").value;
+    const type = document.getElementById("username_type").value;
+
+    if(username.trim() === ""){
+        alert("Username cannot be empty");
+        return;
+    }
+
+    // Table reference
+    const table = document.getElementById("mainTable");
+
+    // Create a new row
+    const newRow = document.createElement("tr");
+
+    // Create cell content
+    newRow.innerHTML = `
+        <td>
+            Username: <b>${username}</b> <br>
+            Type: <b>${type}</b>
+        </td>
+    `;
+
+    // Append row to table
+    table.appendChild(newRow);
+
+    // Clear input
+    document.getElementById("username").value = "";
+});
+
+
+</script>
+
+
+</html>
