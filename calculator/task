@@ -1,0 +1,106 @@
+
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <style>
+        #calculator {
+            width: 200px;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        #display {
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .btn {
+            width: 45px;
+            height: 40px;
+            font-size: 18px;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="calculator">
+    <input type="text" id="display" disabled>
+    <div id="buttons"></div>
+</div>
+
+<script>
+    let keys = [
+        "7","8","9","+",
+        "4","5","6","-",
+        "1","2","3","*",
+        "0","=","/","C",
+        "AC"
+    ];
+
+    let display = document.getElementById("display");
+    let buttonArea = document.getElementById("buttons");
+    let firstNumber = "";
+    let operator = "";
+    let secondNumber = "";
+    keys.forEach(key => {
+        let btn = document.createElement("button");
+        btn.innerHTML = key;
+        btn.className = "btn";
+
+        btn.onclick = function () {
+            if (key === "AC") {
+                firstNumber = "";
+                operator = "";
+                secondNumber = "";
+                display.value = "";
+                return;
+            }
+            if (key === "C") {
+                display.value = display.value.slice(0, -1);
+                if (operator === "") {
+                    firstNumber = firstNumber.slice(0, -1);
+                } else {
+                    secondNumber = secondNumber.slice(0, -1);
+                }
+                return;
+            }
+            if (key === "=") {
+                let result = 0;
+                let num1 = Number(firstNumber);
+                let num2 = Number(secondNumber);
+
+                if (operator === "+") result = num1 + num2;
+                if (operator === "-") result = num1 - num2;
+                if (operator === "*") result = num1 * num2;
+                if (operator === "/") result = num2 !== 0 ? num1 / num2 : "Error";
+
+                display.value = result;
+                firstNumber = result.toString();
+                operator = "";
+                secondNumber = "";
+                return;
+            }
+            if (key === "+" || key === "-" || key === "*" || key === "/") {
+                operator = key;
+                display.value += key;
+                return;
+            }
+            display.value += key;
+
+            if (operator === "") {
+                firstNumber += key;
+            } else {
+                secondNumber += key;
+            }
+        };
+
+        buttonArea.appendChild(btn);
+    });
+
+</script>
+
+</body>
+</html>
