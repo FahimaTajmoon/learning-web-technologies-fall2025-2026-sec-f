@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Blood Bridge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="container">
+            <div class="dashboard-navbar">
+                <div class="dashboard-logo">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-tint"></i>
+                        <span>Blood Bridge</span>
+                    </a>
+                </div>
+                
+                
+                    
+                    <div class="user-profile">
+                        <div class="profile-dropdown">
+                            <div class="profile-info">
+                                <div class="profile-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User Avatar">
+                                    <span class="profile-status online"></span>
+                                </div>
+                                <div class="profile-details">
+                                    <h4>John Doe</h4>
+                                    <p>Blood Donor (O+)</p>
+                                    <div class="profile-points">
+                                        <i class="fas fa-star"></i> 250 Points
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-menu">
+                                <a href="dashboard.html" class="profile-menu-item active">
+                                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                                </a>
+                                <a href="profile.html" class="profile-menu-item">
+                                    <i class="fas fa-user"></i> My Profile
+                                </a>
+                                <a href="donations.html" class="profile-menu-item">
+                                    <i class="fas fa-heart"></i> My Donations
+                                </a>
+                                <a href="requests.html" class="profile-menu-item">
+                                    <i class="fas fa-hand-holding-heart"></i> Blood Requests
+                                </a>
+                                <a href="rewards.html" class="profile-menu-item">
+                                    <i class="fas fa-gift"></i> Rewards
+                                </a>
+                                <a href="settings.html" class="profile-menu-item">
+                                    <i class="fas fa-cog"></i> Settings
+                                </a>
+                                <div class="profile-divider"></div>
+                                <a href="index.html" class="profile-menu-item logout">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+       
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <h3>Blood Bridge</h3>
+                <p>Life-Saving Platform</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="dashboard.html" class="sidebar-menu-item active">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    
+                    <li class="sidebar-menu-category">
+                        <span>Blood Management</span>
+                    </li>
+                    <li>
+                        <a href="donate-blood.html" class="sidebar-menu-item">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Donate Blood</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="request-blood.html" class="sidebar-menu-item">
+                            <i class="fas fa-hand-holding-medical"></i>
+                            <span>Request Blood</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blood-requests.html" class="sidebar-menu-item">
+                            <i class="fas fa-list-alt"></i>
+                            <span>Blood Requests</span>
+                            <span class="menu-badge">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="donation-history.html" class="sidebar-menu-item">
+                            <i class="fas fa-history"></i>
+                            <span>Donation History</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu-category">
+                     <span>Emergency Services</span>
+                    </li>
+                    <li>
+                     <a href="#ambulance" class="sidebar-menu-item">
+                     <i class="fas fa-ambulance"></i>
+                     <span>Emergency Ambulance</span>
+                      </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="sidebar-menu-category">
+                        <span>Community</span>
+                    </li>
+                    <li>
+                        <a href="campaigns.html" class="sidebar-menu-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Campaigns & Events</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="rewards.html" class="sidebar-menu-item">
+                            <i class="fas fa-gift"></i>
+                            <span>Rewards</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="leaderboard.html" class="sidebar-menu-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>Leaderboard</span>
+                        </a>
+                    </li>
+                    
+                    <li class="sidebar-menu-category">
+                        <span>Account</span>
+                    </li>
+                    <li>
+                        <a href="profile.html" class="sidebar-menu-item">
+                            <i class="fas fa-user"></i>
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html" class="sidebar-menu-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="help.html" class="sidebar-menu-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help & Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="donor-status">
+                    <div class="status-indicator active"></div>
+                    <span>Available for Donation</span>
+                </div>
+                <button class="toggle-status-btn">Toggle Status</button>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+          
+            <div class="dashboard-main-header">
+                <h1>Welcome back, John!</h1>
+                <p>Here's what's happening with your blood donation activities</p>
+                <div class="quick-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>5</h3>
+                            <p>Total Donations</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>3</h3>
+                            <p>Lives Saved</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>250</h3>
+                            <p>Reward Points</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>45</h3>
+                            <p>Days Since Last Donation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+              
+                <div class="dashboard-row">
+                    <div class="dashboard-col">
+                        <div class="dashboard-card quick-actions-card">
+                            <div class="card-header">
+                                <h3>Quick Actions</h3>
+                                <p>Perform common tasks quickly</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="quick-actions-grid">
+                                    <a href="donate-blood.html" class="quick-action">
+                                        <div class="action-icon">
+                                            <i class="fas fa-heartbeat"></i>
+                                        </div>
+                                        <div class="action-text">
+                                            <h4>Donate Blood</h4>
+                                            <p>Offer to donate blood</p>
+                                        </div>
+                                    </a>
+                                    <a href="request-blood.html" class="quick-action">
+                                        <div class="action-icon">
+                                            <i class="fas fa-hand-holding-medical"></i>
+                                        </div>
+                                        <div class="action-text">
+                                            <h4>Request Blood</h4>
+                                            <p>Request blood for patient</p>
+                                        </div>
+                                    </a>
+                                    <a href="campaigns.html" class="quick-action">
+                                        <div class="action-icon">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <div class="action-text">
+                                            <h4>Join Campaign</h4>
+                                            <p>Find donation events</p>
+                                        </div>
+                                    </a>
+                                    <a href="messages.html" class="quick-action">
+                                        <div class="action-icon">
+                                            <i class="fas fa-comments"></i>
+                                        </div>
+                                        <div class="action-text">
+                                            <h4>Ambulance</h4>
+                                            <p>Emergency service</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-col">
+                        <div class="dashboard-card blood-request-card">
+                            <div class="card-header">
+                                <h3>Urgent Blood Requests</h3>
+                                <p>Patients in need of your blood type (O+)</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="blood-requests-list">
+                                    <div class="blood-request-item urgent">
+                                        <div class="request-info">
+                                            <h4>A+ Blood Needed</h4>
+                                            <p>Dhaka Medical College Hospital</p>
+                                            <div class="request-meta">
+                                                <span><i class="fas fa-map-marker-alt"></i> 2.5 km away</span>
+                                                <span><i class="fas fa-clock"></i> 1 hour ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="request-actions">
+                                            <button class="btn btn-primary btn-sm">Respond</button>
+                                        </div>
+                                    </div>
+                                    <div class="blood-request-item">
+                                        <div class="request-info">
+                                            <h4>B+ Blood Needed</h4>
+                                            <p>Apollo Hospital, Dhaka</p>
+                                            <div class="request-meta">
+                                                <span><i class="fas fa-map-marker-alt"></i> 5.2 km away</span>
+                                                <span><i class="fas fa-clock"></i> 3 hours ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="request-actions">
+                                            <button class="btn btn-outline btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                    <div class="blood-request-item">
+                                        <div class="request-info">
+                                            <h4>O+ Blood Needed</h4>
+                                            <p>Square Hospital</p>
+                                            <div class="request-meta">
+                                                <span><i class="fas fa-map-marker-alt"></i> 7.8 km away</span>
+                                                <span><i class="fas fa-clock"></i> 5 hours ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="request-actions">
+                                            <button class="btn btn-outline btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="blood-requests.html" class="view-all-link">View All Requests <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="dashboard-row">
+                   <!-- <div class="dashboard-col">
+                        <div class="dashboard-card recent-activity-card">
+                            <div class="card-header">
+                                <h3>Recent Activity</h3>
+                                <p>Your recent blood donation activities</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="activity-timeline">
+                                    <div class="activity-item">
+                                        <div class="activity-icon success">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <h4>Blood Donation Completed</h4>
+                                            <p>You donated blood at AIUB Blood Donation Camp</p>
+                                            <span class="activity-time">2 days ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon primary">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <h4>Request Accepted</h4>
+                                            <p>You accepted a blood request from Mirpur General Hospital</p>
+                                            <span class="activity-time">1 week ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon warning">
+                                            <i class="fas fa-exclamation-circle"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <h4>Donation Due Soon</h4>
+                                            <p>You're eligible to donate blood again in 15 days</p>
+                                            <span class="activity-time">2 weeks ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon info">
+                                            <i class="fas fa-gift"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <h4>Reward Points Added</h4>
+                                            <p>50 points added to your account for donation</p>
+                                            <span class="activity-time">3 weeks ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                    
+
+
+                     <div class="dashboard-col">
+                        <div class="dashboard-card rewards-card">
+                            <div class="card-header">
+                                <h3>Your Rewards</h3>
+                                <p>Earned points and available rewards</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="rewards-points">
+                                    <div class="points-display">
+                                        <h2>250</h2>
+                                        <p>Reward Points</p>
+                                    </div>
+                                    <div class="points-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 50%"></div>
+                                        </div>
+                                        <div class="progress-labels">
+                                            <span>0</span>
+                                            <span>500 points for next reward</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="available-rewards">
+                                    <h4>Available Rewards</h4>
+                                    <div class="rewards-grid">
+                                        <div class="reward-item">
+                                            <div class="reward-icon">
+                                                <i class="fas fa-mug-hot"></i>
+                                            </div>
+                                            <div class="reward-info">
+                                                <h5>Free Coffee</h5>
+                                                <p>100 points</p>
+                                            </div>
+                                            <button class="btn btn-outline btn-xs">Redeem</button>
+                                        </div>
+                                        <div class="reward-item">
+                                            <div class="reward-icon">
+                                                <i class="fas fa-tshirt"></i>
+                                            </div>
+                                            <div class="reward-info">
+                                                <h5>Blood Bridge T-Shirt</h5>
+                                                <p>300 points</p>
+                                            </div>
+                                            <button class="btn btn-outline btn-xs">Redeem</button>
+                                        </div>
+                                        <div class="reward-item">
+                                            <div class="reward-icon">
+                                                <i class="fas fa-ticket-alt"></i>
+                                            </div>
+                                            <div class="reward-info">
+                                                <h5>Movie Ticket</h5>
+                                                <p>500 points</p>
+                                            </div>
+                                            <button class="btn btn-outline btn-xs" disabled>Need 250 more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="dashboard-col">
+                        <div class="dashboard-card campaigns-card">
+                            <div class="card-header">
+                                <h3>Upcoming Campaigns</h3>
+                                <p>Blood donation events near you</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="campaigns-list">
+                                    <div class="campaign-item featured">
+                                        <div class="campaign-date">
+                                            <span class="date-day">25</span>
+                                            <span class="date-month">DEC</span>
+                                        </div>
+                                        <div class="campaign-info">
+                                            <h4>AIUB Blood Donation Camp</h4>
+                                            <p>American International University-Bangladesh</p>
+                                            <div class="campaign-meta">
+                                                <span><i class="fas fa-users"></i> 45 donors registered</span>
+                                                <span><i class="fas fa-map-marker-alt"></i> Kuratoli, Dhaka</span>
+                                            </div>
+                                        </div>
+                                        <div class="campaign-actions">
+                                            <button class="btn btn-primary btn-sm">Join</button>
+                                        </div>
+                                    </div>
+                                    <div class="campaign-item">
+                                        <div class="campaign-date">
+                                            <span class="date-day">30</span>
+                                            <span class="date-month">DEC</span>
+                                        </div>
+                                        <div class="campaign-info">
+                                            <h4>Red Crescent Blood Drive</h4>
+                                            <p>Bangladesh Red Crescent Society</p>
+                                            <div class="campaign-meta">
+                                                <span><i class="fas fa-users"></i> 32 donors registered</span>
+                                                <span><i class="fas fa-map-marker-alt"></i> Motijheel, Dhaka</span>
+                                            </div>
+                                        </div>
+                                        <div class="campaign-actions">
+                                            <button class="btn btn-outline btn-sm">Details</button>
+                                        </div>
+                                    </div>
+                                    <div class="campaign-item">
+                                        <div class="campaign-date">
+                                            <span class="date-day">05</span>
+                                            <span class="date-month">JAN</span>
+                                        </div>
+                                        <div class="campaign-info">
+                                            <h4>New Year Blood Donation</h4>
+                                            <p>Square Hospital & Blood Bridge</p>
+                                            <div class="campaign-meta">
+                                                <span><i class="fas fa-users"></i> 28 donors registered</span>
+                                                <span><i class="fas fa-map-marker-alt"></i> Panthapath, Dhaka</span>
+                                            </div>
+                                        </div>
+                                        <div class="campaign-actions">
+                                            <button class="btn btn-outline btn-sm">Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="campaigns.html" class="view-all-link">View All Campaigns <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-row">
+                    
+                    
+                    <!-- <div class="dashboard-col">
+                        <div class="dashboard-card rewards-card">
+                            <div class="card-header">
+                                <h3>Your Rewards</h3>
+                                <p>Earned points and available rewards</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="rewards-points">
+                                    <div class="points-display">
+                                        <h2>250</h2>
+                                        <p>Reward Points</p>
+                                    </div>
+                                    <div class="points-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 50%"></div>
+                                        </div>
+                                        <div class="progress-labels">
+                                            <span>0</span>
+                                            <span>500 points for next reward</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="available-rewards">
+                                    <h4>Available Rewards</h4>
+                                    <div class="rewards-grid">
+                                        <div class="reward-item">
+                                            <div class="reward-icon">
+                                                <i class="fas fa-mug-hot"></i>
+                                            </div>
+                                            <div class="reward-info">
+                                                <h5>Free Coffee</h5>
+                                                <p>100 points</p>
+                                            </div>
+                                            <button class="btn btn-outline btn-xs">Redeem</button>
+                                        </div>
+                                        <div class="reward-item">
+                                            <div class="reward-icon">
+                                                <i class="fas fa-tshirt"></i>
+                                            </div>
+                                            <div class="reward-info">
+                                                <h5>Blood Bridge T-Shirt</h5>
+                                                <p>300 points</p>
+                                            </div>
+                                            <button class="btn btn-outline btn-xs">Redeem</button>
+                                        </div>
+                                        <div class="reward-item">
+                                            <div class="reward-icon">
+                                                <i class="fas fa-ticket-alt"></i>
+                                            </div>
+                                            <div class="reward-info">
+                                                <h5>Movie Ticket</h5>
+                                                <p>500 points</p>
+                                            </div>
+                                            <button class="btn btn-outline btn-xs" disabled>Need 250 more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+
+
+                        <!-- Emergency Ambulance Row -->
+
+    <div class="dashboard-col">
+        <div class="dashboard-card ambulance-card">
+            <div class="card-header">
+                <h3>Emergency Ambulance Service</h3>
+                <p>Find available ambulance services in your area</p>
+            </div>
+            <div class="card-body">
+                <div class="ambulance-search">
+                    <div class="form-group">
+                        <label for="citySelect">Select City</label>
+                        <select id="citySelect" class="city-select">
+                            <option value="">Choose your city</option>
+                            <option value="dhaka">Dhaka</option>
+                            <option value="chattogram">Chattogram</option>
+                            <option value="khulna">Khulna</option>
+                            <option value="rajshahi">Rajshahi</option>
+                            <option value="barishal">Barishal</option>
+                            <option value="sylhet">Sylhet</option>
+                            <option value="rangpur">Rangpur</option>
+                            <option value="mymensingh">Mymensingh</option>
+                        </select>
+                    </div>
+                    
+                    <div class="ambulance-results" id="ambulanceResults">
+                        <div class="no-selection">
+                            <i class="fas fa-ambulance"></i>
+                            <p>Please select a city to view available ambulance services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+
+                
+            </div>
+        </main>
+    </div>
+
+    <footer class="dashboard-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-tint"></i>
+                        <span>Blood Bridge</span>
+                    </div>
+                    <p class="footer-about">A smart blood donation and request management system.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="donate-blood.html">Donate Blood</a></li>
+                        <li><a href="request-blood.html">Request Blood</a></li>
+                        <li><a href="campaigns.html">Campaigns</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="#">Safety Guidelines</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Emergency Contact</h3>
+                    <p>24/7 Emergency Blood Request Hotline:</p>
+                    <p class="emergency-number"><i class="fas fa-phone"></i> +880 1234 567890</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blood Bridge. All rights reserved. | AIUB Web Technologies Project - Group F</p>
+                <p>Logged in as: <strong>John Doe (Donor)</strong> | Last login: Today, 10:30 AM</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="donateBloodModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Donate Blood</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="donateBloodForm">
+                    <div class="form-group">
+                        <label for="donationType">Donation Type</label>
+                        <select id="donationType" required>
+                            <option value="">Select donation type</option>
+                            <option value="whole">Whole Blood</option>
+                            <option value="platelets">Platelets</option>
+                            <option value="plasma">Plasma</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="donationDate">Preferred Donation Date</label>
+                        <input type="date" id="donationDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="donationTime">Preferred Time</label>
+                        <input type="time" id="donationTime" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="donationLocation">Preferred Location</label>
+                        <select id="donationLocation" required>
+                            <option value="">Select location</option>
+                            <option value="dhaka-medical">Dhaka Medical College</option>
+                            <option value="apollo">Apollo Hospital</option>
+                            <option value="square">Square Hospital</option>
+                            <option value="aiub">AIUB Medical Center</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="healthDeclaration">Health Declaration</label>
+                        <textarea id="healthDeclaration" rows="3" placeholder="Any health conditions or medications?"></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="eligibility" required>
+                        <label for="eligibility">I confirm that I meet all donor eligibility criteria</label>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button type="submit" class="btn btn-primary">Submit Donation Offer</button>
+                        <button type="button" class="btn btn-outline modal-close">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="requestBloodModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Request Blood</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="requestBloodForm">
+                    <div class="form-group">
+                        <label for="patientName">Patient Name</label>
+                        <input type="text" id="patientName" placeholder="Enter patient name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bloodTypeNeeded">Blood Type Needed</label>
+                        <select id="bloodTypeNeeded" required>
+                            <option value="">Select blood type</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="unitsNeeded">Units Required</label>
+                        <input type="number" id="unitsNeeded" min="1" max="10" value="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hospitalName">Hospital Name</label>
+                        <input type="text" id="hospitalName" placeholder="Enter hospital name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="urgencyLevel">Urgency Level</label>
+                        <select id="urgencyLevel" required>
+                            <option value="normal">Normal (Within 48 hours)</option>
+                            <option value="urgent">Urgent (Within 24 hours)</option>
+                            <option value="emergency">Emergency (Immediately)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additionalInfo">Additional Information</label>
+                        <textarea id="additionalInfo" rows="3" placeholder="Any additional details about the patient or request"></textarea>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                        <button type="button" class="btn btn-outline modal-close">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

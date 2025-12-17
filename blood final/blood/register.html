@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Blood Bridge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-tint"></i>
+                    <span>Blood Bridge</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    
+                    <li class="nav-btn"><a href="login.html" class="btn btn-outline">Login</a></li>
+                    <li class="nav-btn"><a href="register.html" class="btn btn-primary active">Sign Up</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="register section-padding">
+        <div class="container">
+            <div class="register-container">
+                <div class="register-header">
+                    <h1>Create Your Account</h1>
+                    <p>Join Blood Bridge and become part of a life-saving community</p>
+                </div>
+                
+                <div class="register-content">
+                    <div class="register-form-container">
+                        <form id="registerForm" class="register-form">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" placeholder="Enter your full name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Create a password" required minlength="8">
+                                <small>Password must be at least 8 characters long</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="userType">I want to join as</label>
+                                <select id="userType" required>
+                                    <option value="">Select your role</option>
+                                    <option value="donor">Blood Donor</option>
+                                    <option value="recipient">Blood Recipient/Patient</option>
+                                    <option value="organization">Hospital/Organization</option>
+                                    <option value="ambulance">Ambulance Service</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bloodGroup">Blood Group (If Donor)</label>
+                                <select id="bloodGroup">
+                                    <option value="">Select blood group</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location">Location/City</label>
+                                <input type="text" id="location" placeholder="Enter your city" required>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terms" required>
+                                <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                            
+                            <div class="form-footer">
+                                <p>Already have an account? <a href="login.html">Login here</a></p>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="register-info">
+                        <h2>Why Join Blood Bridge?</h2>
+                        <div class="benefits-list">
+                            <div class="benefit">
+                                <i class="fas fa-heartbeat"></i>
+                                <div>
+                                    <h3>Save Lives</h3>
+                                    <p>Your donation can save up to 3 lives. Join our network of life-savers.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h3>Secure Platform</h3>
+                                    <p>Your data is protected with blockchain technology and strict privacy controls.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit">
+                                <i class="fas fa-bolt"></i>
+                                <div>
+                                    <h3>Quick Matching</h3>
+                                    <p>AI-powered matching connects donors with recipients in real-time during emergencies.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit">
+                                <i class="fas fa-gift"></i>
+                                <div>
+                                    <h3>Reward System</h3>
+                                    <p>Earn points for donations that can be redeemed for rewards and recognition.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h3>Community Support</h3>
+                                    <p>Join a supportive community of donors, healthcare professionals, and volunteers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-tint"></i>
+                        <span>Blood Bridge</span>
+                    </div>
+                    <p class="footer-about">A smart blood donation and request management system developed by AIUB students to bridge the gap between donors and recipients.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#team">Our Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blood Donation Guide</a></li>
+                        <li><a href="#">Eligibility Criteria</a></li>
+                        <li><a href="#">Safety Protocols</a></li>
+                        <li><a href="#">Blog & Articles</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Need Help?</h3>
+                    <p>Contact our support team for assistance with registration or any other queries.</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> support@bloodbridge.com</p>
+                        <p><i class="fas fa-phone"></i> +880 1234 567890</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blood Bridge. All rights reserved. | Developed by Group F, AIUB</p>
+                <p>This project is submitted for the Web Technologies course (Fall 25-26) at American International University-Bangladesh.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const registerForm = document.getElementById('registerForm');
+            
+            if (registerForm) {
+                registerForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const fullName = document.getElementById('fullName').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const password = document.getElementById('password').value;
+                    const confirmPassword = document.getElementById('confirmPassword').value;
+                    const userType = document.getElementById('userType').value;
+                    
+                    if (password !== confirmPassword) {
+                        alert('Passwords do not match!');
+                        return;
+                    }
+                    
+                    if (password.length < 8) {
+                        alert('Password must be at least 8 characters long!');
+                        return;
+                    }
+                    
+                    if (!userType) {
+                        alert('Please select your role');
+                        return;
+                    }
+                    
+                    console.log('Registration data:', {
+                        fullName, email, phone, userType, password: '***'
+                    });
+                    
+                    alert(`Registration successful! Welcome to Blood Bridge, ${fullName}. You will be redirected to the login page.`);
+                    
+                    setTimeout(() => {
+                        window.location.href = 'login.html';
+                    }, 2000);
+                });
+                
+                const userTypeSelect = document.getElementById('userType');
+                const bloodGroupField = document.getElementById('bloodGroup').closest('.form-group');
+                
+                bloodGroupField.style.display = 'none';
+                
+                userTypeSelect.addEventListener('change', function() {
+                    if (this.value === 'donor') {
+                        bloodGroupField.style.display = 'block';
+                    } else {
+                        bloodGroupField.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

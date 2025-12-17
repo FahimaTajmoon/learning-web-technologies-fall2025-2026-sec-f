@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Blood Bridge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a  class="logo">
+                    <i class="fas fa-tint"></i>
+                    <span>Blood Bridge</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    
+                    <li class="nav-btn"><a href="login.html" class="btn btn-primary active">Login</a></li>
+                    <li class="nav-btn"><a href="register.html" class="btn btn-outline">Sign Up</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="login section-padding">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-header">
+                    <h1>Welcome Back</h1>
+                    <p>Login to your Blood Bridge account to continue saving lives</p>
+                </div>
+                
+                <div class="login-content">
+                    <div class="login-form-container">
+                        <form id="loginPageForm" class="login-form">
+                            <div class="form-group">
+                                <label for="loginEmail">Email Address</label>
+                                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="loginPassword">Password</label>
+                                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                                <div class="password-toggle">
+                                    <i class="fas fa-eye" id="togglePassword"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="form-options">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="rememberMe"> Remember me
+                                </label>
+                                <a href="#" class="forgot-password">Forgot Password?</a>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            
+                            <div class="divider">
+                                <span>Or login with</span>
+                            </div>
+                            
+                            <div class="social-login">
+                                <button type="button" class="social-btn google">
+                                    <i class="fab fa-google"></i> Google
+                                </button>
+                                <button type="button" class="social-btn facebook">
+                                    <i class="fab fa-facebook-f"></i> Facebook
+                                </button>
+                            </div>
+                            
+                            <div class="form-footer">
+                                <p>Don't have an account? <a href="register.html">Sign up now</a></p>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="login-info">
+                        <h2>Blood Bridge Dashboard Features</h2>
+                        <div class="dashboard-features">
+                            <div class="feature">
+                                <i class="fas fa-heart"></i>
+                                <h3>Donation History</h3>
+                                <p>Track all your blood donations and see the impact you've made.</p>
+                            </div>
+                            
+                            <div class="feature">
+                                <i class="fas fa-bell"></i>
+                                <h3>Real-time Alerts</h3>
+                                <p>Get instant notifications for blood requests in your area.</p>
+                            </div>
+                            
+                            
+                            
+                            <div class="feature">
+                                <i class="fas fa-award"></i>
+                                <h3>Reward Points</h3>
+                                <p>Check your reward points balance and available redemption options.</p>
+                            </div>
+                            
+                            <div class="feature">
+                                <i class="fas fa-calendar-alt"></i>
+                                <h3>Campaign Calendar</h3>
+                                <p>View and join upcoming blood donation campaigns and events.</p>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-tint"></i>
+                        <span>Blood Bridge</span>
+                    </div>
+                    <p class="footer-about">A smart blood donation and request management system developed by AIUB students to bridge the gap between donors and recipients.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#team">Our Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blood Donation Guide</a></li>
+                        <li><a href="#">Eligibility Criteria</a></li>
+                        <li><a href="#">Safety Protocols</a></li>
+                        <li><a href="#">Blog & Articles</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Need Help?</h3>
+                    <p>Having trouble logging in? Contact our support team for assistance.</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> support@bloodbridge.com</p>
+                        <p><i class="fas fa-phone"></i> +880 1234 567890</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blood Bridge. All rights reserved. | Developed by Group F, AIUB</p>
+                <p>This project is submitted for the Web Technologies course (Fall 25-26) at American International University-Bangladesh.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginPageForm');
+            const togglePassword = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('loginPassword');
+            
+            if (togglePassword && passwordInput) {
+                togglePassword.addEventListener('click', function() {
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    this.classList.toggle('fa-eye');
+                    this.classList.toggle('fa-eye-slash');
+                });
+            }
+            
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const email = document.getElementById('loginEmail').value;
+                    const password = document.getElementById('loginPassword').value;
+                    const rememberMe = document.getElementById('rememberMe').checked;
+                    
+                    if (!email || !password) {
+                        alert('Please fill in all fields');
+                        return;
+                    }
+                    
+                    console.log('Login attempt:', { email, rememberMe, password: '***' });
+                    
+                    alert('Login successful! Redirecting to dashboard...');
+                    
+                    
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 1500);
+                });
+            }
+            
+            const socialButtons = document.querySelectorAll('.social-btn');
+            socialButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const provider = this.classList.contains('google') ? 'Google' : 'Facebook';
+                    alert(`In a real application, this would redirect to ${provider} authentication`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
